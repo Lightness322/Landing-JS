@@ -106,7 +106,7 @@ legend {
   display: block;
 }
 
-.footer__by a, .footer__text_first, .footer__text, .sign-up-block__email-input, .sign-up-block__subtitle, .search-block__input, .ideas__link, .ideas__text, .most-selled__column-item-price, .most-selled__column-item-subtitle, .latest-offers__item-title, .button, .new-phones__text, .menu__ul {
+.footer__by a, .footer__text_first, .footer__text, .sign-up-block__email-input, .sign-up-block__subtitle, .search-block__input, .ideas__link, .ideas__text, .most-selled__column-item-price, .most-selled__column-item-subtitle, .latest-offers__item-title, .button, .new-phones__text, .menu__ul, .menu__solutions-items a {
   font-family: "Inter";
   font-weight: 400;
   color: rgb(0, 0, 0);
@@ -186,6 +186,28 @@ button:hover {
   bottom: 0;
 }
 
+.menu__solutions-items {
+  z-index: 6;
+  display: none;
+  flex-direction: column;
+  gap: 3px;
+  position: absolute;
+  transform: translateY(5px);
+  border: 1px solid;
+  border-radius: 5px;
+  padding: 5px;
+  background-color: white;
+}
+.menu__solutions-items a {
+  font-size: 12px;
+  line-height: 120%;
+  color: black;
+}
+
+.menu__solutions-items.active {
+  display: flex;
+}
+
 .menu__ul {
   font-size: 14px;
   line-height: 120%;
@@ -201,6 +223,10 @@ button:hover {
 .menu__arrow {
   display: inline-block;
   vertical-align: middle;
+}
+
+.menu__arrow.active {
+  transform: rotate(180deg);
 }
 
 .header__search {
@@ -268,6 +294,14 @@ button:hover {
   border-radius: 588px;
 }
 
+.new-phones__image {
+  flex-grow: 1;
+}
+.new-phones__image img {
+  display: block;
+  margin: 0 auto;
+}
+
 .new-phones__arrow-right {
   right: 18px;
   width: 12px;
@@ -294,6 +328,18 @@ button:hover {
 }
 .new-phones__lines :last-child {
   margin-right: 0px;
+}
+
+.new-phones__line-1.active {
+  transform: scaleY(1.5);
+}
+
+.new-phones__line-2.active {
+  transform: scaleY(1.5);
+}
+
+.new-phones__line-3.active {
+  transform: scaleY(1.5);
 }
 
 .latest-offers__title {
@@ -1225,5 +1271,22 @@ button:hover {
     flex-direction: column;
     align-items: center;
     gap: 5px;
+  }
+}
+@media (max-width: 768px) {
+  .menu__li {
+    text-align: center;
+  }
+  .menu__solutions-items.active {
+    display: flex;
+    align-items: start;
+    position: static;
+    border: none;
+    background-color: rgb(220, 229, 226);
+    transform: translateY(15px);
+    gap: 25px;
+  }
+  .menu__solutions-items.active a {
+    font-size: 26px;
   }
 }/*# sourceMappingURL=style.css.map */

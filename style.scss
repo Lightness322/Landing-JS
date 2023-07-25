@@ -80,6 +80,27 @@ button {
     }
   }
 }
+.menu__solutions-items {
+  z-index: 6;
+  display: none;
+  flex-direction: column;
+  gap: 3px;
+  position: absolute;
+  transform: translateY(5px);
+  border: 1px solid;
+  border-radius: 5px;
+  padding: 5px;
+  background-color: white;
+  a {
+    font-size: 12px;
+    @extend %font_inter;
+    line-height: 16.8 / 14 * 100%;
+    color: black;
+  }
+}
+.menu__solutions-items.active {
+  display: flex;
+}
 .menu__ul {
   font-size: 14px;
   @extend %font_inter;
@@ -94,6 +115,9 @@ button {
 .menu__arrow {
   display: inline-block;
   vertical-align: middle;
+}
+.menu__arrow.active {
+  transform: rotate(180deg);
 }
 .header__search-basket {
 }
@@ -168,8 +192,12 @@ button {
   border-radius: 588px;
 }
 .new-phones__image {
+  flex-grow: 1;
+  img {
+    display: block;
+    margin: 0 auto;
+  }
 }
-
 .new-phones__arrow-right {
   right: 18px;
   width: 12px;
@@ -198,6 +226,15 @@ button {
   }
 }
 
+.new-phones__line-1.active {
+  transform: scaleY(1.5);
+}
+.new-phones__line-2.active {
+  transform: scaleY(1.5);
+}
+.new-phones__line-3.active {
+  transform: scaleY(1.5);
+}
 .latest-offers {
 }
 .latest-offers__title {

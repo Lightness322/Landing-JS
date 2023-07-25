@@ -504,3 +504,20 @@
     gap: 5px;
   }
 }
+@media (max-width: 768px) {
+  .menu__li {
+    text-align: center;
+  }
+  .menu__solutions-items.active {
+    display: flex;
+    align-items: start;
+    position: static;
+    border: none;
+    background-color: rgb(220, 229, 226);
+    transform: translateY(15px);
+    gap: 25px;
+    a {
+      font-size: 26px;
+    }
+  }
+}
